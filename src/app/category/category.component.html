@@ -1,0 +1,14 @@
+
+<div class="category-grid">
+  <div *ngFor="let button of buttonArrayForCategory" 
+  class="category-grid-item" [routerLink]="['/articlesList']"
+  [queryParams]="{cagetoryId: button?.cagetoryId, categoryTitle: button?.categoryTitle}">
+    <div class="row category-img">
+        <img style="height: 100%; width: 100%; border-radius:50%" src={{button?.categoryImgUrl}}>
+    </div>
+    <div class="row category-grid-item-title">{{button?.categoryTitle}}
+  </div>
+  </div>
+</div>
+
+<div class="grey-line"></div>

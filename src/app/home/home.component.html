@@ -1,0 +1,11 @@
+<div class="container body-container">
+  <div class="row" *ngIf="bannerList">
+    <app-carousel [carouselList] = "bannerList"></app-carousel>
+  </div>
+  <div class="row" *ngIf="categoryList">
+    <app-category [buttonArrayForCategory] = "categoryList"></app-category>
+  </div>
+  <div class="row" *ngIf="articleList">
+    <app-article [articleList] = "articleList"></app-article>
+  </div>
+</div>

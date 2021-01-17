@@ -1,0 +1,28 @@
+<div *ngFor="let article of articleList" class="article-list-container">
+
+    <div class="row article-list-item-container">
+      <div class="column one-column" (click)="articleClick(article)">
+        <img class="article-list-leading-img" [src]="article?.articleImgUrl" alt="">
+      </div>
+  
+      <div class="column sed-column" (click)="articleClick(article)">
+        <div class="row sed-column-1st-row">{{article?.articleTitle}}</div>
+        <div class="row sed-column-2nd-row">
+          <div class="column sed-column-sed-row-1">
+            <span class="glyphicon glyphicon-time">
+              <label class="sed-column-sed-row-2-date">{{article?.createDate}}
+              </label>
+            </span>
+          </div>
+          <div class="column sed-column-sed-row-2">
+            <span class="glyphicon glyphicon-eye-open"><label class="sed-column-sed-row-2-eye">{{article?.sawNum}}</label></span>
+          </div>
+        </div>
+      </div>
+      <div class="column trd-column" (click)="saveArticle(article)">
+        <span class="glyphicon glyphicon-star" style="font-size: 20px" [class.glyphicon-star-empty]="article.favoriateSaved">
+        </span>
+      </div>
+    </div>
+    <div class="row article-list-grey-line"></div>
+  </div>
